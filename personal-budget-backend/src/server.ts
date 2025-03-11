@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv"
 import asyncHandler from "./middlewares/asyncHandler";
 import errorHandler from "./middlewares/errorHandler";
-
+import eveLopesRouter from "./routers/evelopesRouter";
 
 dotenv.config();
 
@@ -16,11 +16,7 @@ app.use(express.json());
 
 
 
-  app.use('/envelopes', asyncHandler(async (req : Request, res: Response) => {
-    
-    
-  
-}))
+  app.use('/envelopes', eveLopesRouter)
 
 app.use(errorHandler)
 
